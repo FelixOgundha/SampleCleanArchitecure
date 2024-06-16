@@ -15,7 +15,7 @@ namespace CleanMovie.API.Controllers
         public MoviesController(IMovieService service)
         {
             _service = service;
-        }
+        } 
         // GET: api/<MoviesController>
         [HttpGet]
         public ActionResult<List<Movie>> GetMovies()
