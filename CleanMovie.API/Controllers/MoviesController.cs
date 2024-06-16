@@ -32,8 +32,11 @@ namespace CleanMovie.API.Controllers
 
         // POST api/<MoviesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult Post(Movie movie)
         {
+            var newMovie = _service.CreateMovie(movie);
+
+            return Ok(newMovie);
         }
 
         // PUT api/<MoviesController>/5

@@ -22,5 +22,14 @@ namespace CleanMovie.Application.Services
 
             return moviesList;
         }
+
+        public Movie CreateMovie(Movie movie)
+        {
+            var newMovie = _repository.CreateMovie(movie);
+
+            return newMovie;
+        }
+
+       
     }
 }
